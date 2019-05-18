@@ -1,11 +1,11 @@
-import random
+import random # Importa libreria para generar numeros random
 
 print('-------------------------')
 print('  GUESS THE NUMBER GAME  ')
 print('-------------------------')
-print('')
+print()
 
-the_number = random.randint(0, 100)
+the_number = random.randint(0, 100) # randinit genera un entero random, en este cao el rango es de 0 a 100
 guess = -1
 name = input('What is your name: ')
 
@@ -14,8 +14,10 @@ while guess != the_number:
     guess = int(guess_text)
 
     if guess < the_number:
-        print('Sorry {0} your guess of {1} was too LOW.'.format(name, guess))
+        print(f'Sorry {name} your guess of {guess} was too LOW.')
     elif guess > the_number:
-        print('Sorry {0} your guess of {1} was too HIGH.'.format(name, guess))
+        print(f'Sorry {name} your guess of {guess} was too HIGH.')
     else:
-        print('Excellent {0}, the number was {1}'.format(name, the_number))
+        print(f'Excellent {name}, the number was {the_number}')
+
+print('Done')
